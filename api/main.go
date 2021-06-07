@@ -18,7 +18,11 @@ func main() {
 	// Public Routes
 	public := e.Group("")
 
-	// Public Routes
+	// Health Check
+	public.GET("/health", func(c echo.Context) error {
+		return c.JSON(http.StatusOK, map[string]interface{}{"status": "healthy"})
+	})
+
 	public.GET("/offices", func(c echo.Context) error {
 		return c.JSONBlob(http.StatusOK, static.Offices)
 	})
