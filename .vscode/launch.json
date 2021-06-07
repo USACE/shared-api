@@ -10,9 +10,7 @@
       "request": "launch",
       "mode": "auto",
       "program": "${workspaceFolder}/api/main.go",
-      "env": {
-        "SHARED_LAMBDACONTEXT": "FALSE"
-      },
+      "env": {},
       "args": []
     }
   ]
